@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "D3IEmjBY+j0=",
+  "success": true,
+  "projectFilePath": "D:\\AspNetCore\\TransactEase\\TransactEase\\TransactEase.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\uu\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.0\\microsoft.aspnetcore.openapi.9.0.0.nupkg.sha512",
+    "C:\\Users\\uu\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}

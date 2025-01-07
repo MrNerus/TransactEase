@@ -1,0 +1,6 @@
+@TransactEase_HostAddress = http://localhost:5003
+
+GET {{TransactEase_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
