@@ -31,3 +31,7 @@ d:\AspNetCore\TransactEase\TransactEase\obj\Debug\net9.0\refint\TransactEase.dll
 d:\AspNetCore\TransactEase\TransactEase\obj\Debug\net9.0\TransactEase.pdb
 d:\AspNetCore\TransactEase\TransactEase\obj\Debug\net9.0\TransactEase.genruntimeconfig.cache
 d:\AspNetCore\TransactEase\TransactEase\obj\Debug\net9.0\ref\TransactEase.dll
+d:\AspNetCore\TransactEase\TransactEase\bin\Debug\net9.0\env\DbConnection.json
+d:\AspNetCore\TransactEase\TransactEase\bin\Debug\net9.0\Newtonsoft.Json.dll
+d:\AspNetCore\TransactEase\TransactEase\bin\Debug\net9.0\Npgsql.dll
+d:\AspNetCore\TransactEase\TransactEase\obj\Debug\net9.0\TransactEase.sourcelink.json
