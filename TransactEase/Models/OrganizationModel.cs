@@ -14,4 +14,5 @@ public class OrganizationModel
     public required string Contact { get; set; }
     public required string Email { get; set; }
     public string? ParentCode { get; set; }
+    public bool IsActive { get; set; } = true;
 }

@@ -59,8 +59,9 @@ public class BankHandeler(BankDAL bankDal, DbConnectionModel dbConnection)
     public async Task<UserResponse> UpdateBankAsync(BankModel bank)
     {
         try {
-            _ = bank.ValidateBankModel();
-            _ = await _bankDal.CreateBankAsync(bank);
+            // TODO
+            // _ = bank.ValidateBankModel();
+            // _ = await _bankDal.CreateBankAsync(bank);
             return new UserResponse { Message = "Bank created successfully", Status = StatusEnum.SUCCESS, Data = bank };
 
         } catch (Exception e) {

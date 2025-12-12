@@ -13,7 +13,6 @@ public static class BankHelper
         if (string.IsNullOrEmpty(bank.Address)) emptyFields.Add("Address");
         if (string.IsNullOrEmpty(bank.SwiftCode)) emptyFields.Add("SwiftCode");
         if (string.IsNullOrEmpty(bank.Country)) emptyFields.Add("Country");
-        if (bank.Type is null) emptyFields.Add("Type");
         if (string.IsNullOrEmpty(bank.Contact)) emptyFields.Add("Contact");
         if (string.IsNullOrEmpty(bank.Email)) emptyFields.Add("Email");
 
@@ -36,7 +35,6 @@ public static class BankHelper
         if (string.IsNullOrEmpty(bank.Address)) emptyFields.Add("Address");
         if (string.IsNullOrEmpty(bank.SwiftCode)) emptyFields.Add("SwiftCode");
         if (string.IsNullOrEmpty(bank.Country)) emptyFields.Add("Country");
-        if (bank.Type is null) emptyFields.Add("Type");
         if (string.IsNullOrEmpty(bank.Contact)) emptyFields.Add("Contact");
         if (string.IsNullOrEmpty(bank.Email)) emptyFields.Add("Email");
 

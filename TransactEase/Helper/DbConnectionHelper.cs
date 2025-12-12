@@ -13,7 +13,8 @@ namespace TransactEase.Helper
         public static string GetConnectionString(this DbConnectionModel dbConnection)
         {
             // return $"User ID={dbConnection.User};Password={dbConnection.Password};Host={dbConnection.Host};Port={dbConnection.Port};Database={dbConnection.Database};Pooling=true;";
-            return $"postgres://{dbConnection.User}:{dbConnection.Password}@{dbConnection.Host}:{dbConnection.Port}/{dbConnection.Database}";
+            // return $"postgres://{dbConnection.User}:{dbConnection.Password}@{dbConnection.Host}:{dbConnection.Port}/{dbConnection.Database}";
+            return $"Host={dbConnection.Host};Port={dbConnection.Port};Database={dbConnection.Database};Username={dbConnection.User};Password={dbConnection.Password}";
         }
 
         

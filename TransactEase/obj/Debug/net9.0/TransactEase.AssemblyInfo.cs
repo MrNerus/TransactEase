@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TransactEase")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+da452e99c45f6602ce993d1d6591ef4a2d6c5c66")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+685bab3cd4ce9ea4c99336340d46a08981820852")]
 [assembly: System.Reflection.AssemblyProductAttribute("TransactEase")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TransactEase")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

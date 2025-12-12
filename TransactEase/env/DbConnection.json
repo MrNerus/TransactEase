@@ -1,6 +1,6 @@
 {
     "User": "postgres",
-    "Password": "sasasa",
+    "Password": "postgres",
     "Host": "127.0.0.1",
     "Port": 5432,
     "Database": "TransactEase"

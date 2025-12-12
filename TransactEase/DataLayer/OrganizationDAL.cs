@@ -3,6 +3,8 @@ using Dapper;
 using TransactEase.Enums;
 using TransactEase.Models;
 using TransactEase.Utility;
+using TransactEase.Helper;
+using Npgsql;
 
 namespace TransactEase.DataLayer;
 
@@ -17,9 +19,9 @@ public class OrganizationDAL(DbConnectionModel dbConnection)
 
             string insertQuery = Query.CreateOrganization;
 
-            int reader = await connection.ExecuteAsync(insertQuery, organization, transaction);
+            int rowsAffected = await connection.ExecuteAsync(insertQuery, organization, transaction);
 
-            if (reader == 1)
+            if (rowsAffected == 1)
             {
                 _ = new UserException(new { message = "Organization created successfully", invoker = "CreateOrganization", data = organization }, true, StatusEnum.SUCCESS);
                 return true;
@@ -37,5 +39,33 @@ public class OrganizationDAL(DbConnectionModel dbConnection)
             _ = new UserException(new { message = "Error creating organization", invoker = "CreateOrganization", data = new { DataIn = organization, Exception = e } }, true, StatusEnum.ERROR);
             throw;
         }
+    }
+
+    public async Task<IEnumerable<OrganizationModel>> GetAllOrganizationsAsync()
+    {
+        using var connection = new NpgsqlConnection(_dbConnection.GetConnectionString());
+        return await connection.QueryAsync<OrganizationModel>(Query.GetAllOrganizations);
+    }
+
+    public async Task<OrganizationModel?> GetOrganizationByIdAsync(string id)
+    {
+        using var connection = new NpgsqlConnection(_dbConnection.GetConnectionString());
+        OrganizationModel? organization = await connection.QueryFirstOrDefaultAsync<OrganizationModel>(Query.GetOrganization, new { Id = id });
+        return organization;
+
+    }
+
+    public async Task<bool> UpdateOrganizationAsync(OrganizationModel organization)
+    {
+        using var connection = new NpgsqlConnection(_dbConnection.GetConnectionString());
+        var rowsAffected = await connection.ExecuteAsync(Query.UpdateOrganization, organization);
+        return rowsAffected > 0;
+    }
+
+    public async Task<bool> DeleteOrganizationAsync(string id)
+    {
+        using var connection = new NpgsqlConnection(_dbConnection.GetConnectionString());
+        var rowsAffected = await connection.ExecuteAsync(Query.DeleteOrganization, new { Id = id });
+        return rowsAffected > 0;
     }
 }

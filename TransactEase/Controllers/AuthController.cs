@@ -7,20 +7,23 @@ using TransactEase.Models;
 namespace TransactEase.Controllers;
 
 [ApiController]
-[Route("api/create")]
-public class CreateController(BankHandeler bankHandeler) : ControllerBase
+[Route("api/auth")]
+public class AuthController(AuthHandler authHandler) : ControllerBase
 {
-    private BankHandeler _bankHandeler = bankHandeler;
+    private readonly AuthHandler _authHandler = authHandler;
 
     [HttpPost]
-    [Route("bank")]
-    public async Task<IActionResult> CreateBank([FromBody] BankModel bank)
+    [Route("login")]
+    public async Task<IActionResult> Login([FromBody] LoginModel login)
     {
-        try {
-            UserResponse res = await _bankHandeler.CreateBankAsync(bank);
+        try
+        {
+            var res = await _authHandler.LoginAsync(login);
             if (res.Status != StatusEnum.ERROR) return Ok(res);
             return BadRequest(res);
-        } catch (Exception e) {
+        }
+        catch (Exception e)
+        {
             return BadRequest(new UserResponse { Message = e.Message, Status = StatusEnum.ERROR });
         }
     }

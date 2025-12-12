@@ -1,12 +1,1 @@
-{
-  "Version": 1,
-  "Hash": "NkfuHVIhbsHnk5z/dURPkzhfN23/UL5GJukxkdA4grc=",
-  "Source": "TransactEase",
-  "BasePath": "_content/TransactEase",
-  "Mode": "Default",
-  "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
-}
+{"Version":1,"Hash":"Uj7thYmIyWo8K8IGJK8BH8I4GirNvBOT+3G6E2gLpWU=","Source":"TransactEase","BasePath":"/","Mode":"Root","ManifestType":"Build","ReferencedProjectsConfiguration":[],"DiscoveryPatterns":[],"Assets":[],"Endpoints":[]}
