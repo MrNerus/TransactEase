@@ -6,7 +6,6 @@ d:\AspNetCore\TransactEase\TransactEase\bin\Debug\net9.0\TransactEase.deps.json
 d:\AspNetCore\TransactEase\TransactEase\bin\Debug\net9.0\TransactEase.runtimeconfig.json
 d:\AspNetCore\TransactEase\TransactEase\bin\Debug\net9.0\TransactEase.dll
 d:\AspNetCore\TransactEase\TransactEase\bin\Debug\net9.0\TransactEase.pdb
-d:\AspNetCore\TransactEase\TransactEase\bin\Debug\net9.0\Microsoft.AspNetCore.OpenApi.dll
 d:\AspNetCore\TransactEase\TransactEase\bin\Debug\net9.0\Microsoft.OpenApi.dll
 d:\AspNetCore\TransactEase\TransactEase\obj\Debug\net9.0\TransactEase.csproj.AssemblyReference.cache
 d:\AspNetCore\TransactEase\TransactEase\obj\Debug\net9.0\TransactEase.GeneratedMSBuildEditorConfig.editorconfig
@@ -44,3 +43,7 @@ D:\AspNetCore\TransactEase\TransactEase\obj\Debug\net9.0\rjsmrazor.dswa.cache.js
 D:\AspNetCore\TransactEase\TransactEase\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
 D:\AspNetCore\TransactEase\TransactEase\obj\Debug\net9.0\staticwebassets.build.json.cache
 D:\AspNetCore\TransactEase\TransactEase\obj\Debug\net9.0\swae.build.ex.cache
+D:\AspNetCore\TransactEase\TransactEase\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\AspNetCore\TransactEase\TransactEase\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\AspNetCore\TransactEase\TransactEase\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\AspNetCore\TransactEase\TransactEase\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt

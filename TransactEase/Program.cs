@@ -4,12 +4,26 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json;
 using TransactEase.BusinessLayer;
+using TransactEase.DataLayer;
 using TransactEase.Models;
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddOpenApi();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
 builder.Services.AddMemoryCache();
+
+// Configure CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAngularApp", policy =>
+    {
+        policy.WithOrigins("http://localhost:4200")
+              .AllowAnyMethod()
+              .AllowAnyHeader()
+              .AllowCredentials();
+    });
+});
 
 builder.Services.AddAuthentication(options =>
 {
@@ -31,6 +45,11 @@ builder.Services.AddAuthentication(options =>
 // New Services
 builder.Services.AddScoped<DbService>();
 builder.Services.AddScoped<SchemaService>();
+builder.Services.AddScoped<TrustService>();
+builder.Services.AddScoped<CashbackService>();
+builder.Services.AddScoped<OrganizationHandler>();
+builder.Services.AddScoped<OrganizationDAL>();
+
 
 // Removed old services (BankHandler, BankDAL, etc.)
 
@@ -38,9 +57,11 @@ var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
 {
-    app.MapOpenApi();
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
 
+app.UseCors("AllowAngularApp");
 app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();

@@ -5,31 +5,29 @@ using TransactEase.DTO;
 using TransactEase.Enums;
 using TransactEase.Helper;
 using TransactEase.Models;
+using TransactEase.Models.Entities;
 using TransactEase.Utility;
 
 namespace TransactEase.BusinessLayer;
 
-public class OrganizationHandler(OrganizationDAL organizationDal, DbConnectionModel dbConnection)
+public class OrganizationHandler(OrganizationDAL organizationDal, DbService dbService)
 {
+    private readonly DbService _dbService = dbService;
     private OrganizationDAL _organizationDal = organizationDal;
-    private readonly DbConnectionModel _dbConnection = dbConnection;
-
-    public async Task<UserResponse> CreateOrganizationAsync(OrganizationModel organization)
+    public async Task<UserResponse> CreateOrganizationAsync(Organization organization)
     {
         try
         {
-            _ = organization.ValidateOrganizationModel();
 
-            using var connection = new NpgsqlConnection(_dbConnection.GetConnectionString());
+            using NpgsqlConnection connection = (NpgsqlConnection)_dbService.CreateConnection();
             await connection.OpenAsync();
             using var transaction = await connection.BeginTransactionAsync();
 
-            if (!string.IsNullOrEmpty(organization.ParentCode))
+            if (organization.ParentId is not null)
             {
                 string checkOrganizationHierarchyQuery = Query.CheckOrganizationHierarchy;
-                int? type = await connection.QueryFirstAsync<int>(checkOrganizationHierarchyQuery, new { ParentCode = organization.ParentCode });
-                if (type is null) throw new UserException(new { message = "Parent organization not found", invoker = "CreateOrganization", data = organization }, true, StatusEnum.ERROR);
-                if (type > (int)organization.Type) throw new UserException(new { message = "Organization Type Hierarchy is not correct", invoker = "CreateOrganization", data = organization }, true, StatusEnum.ERROR);
+                int? parentId = await connection.QueryFirstAsync<int>(checkOrganizationHierarchyQuery, new { ParentId = organization.ParentId }, transaction);
+                if (parentId is null) throw new UserException(new { message = "Parent organization not found", invoker = "CreateOrganization", data = organization }, true, StatusEnum.ERROR);
             }
 
             try
@@ -53,20 +51,25 @@ public class OrganizationHandler(OrganizationDAL organizationDal, DbConnectionMo
         }
     }
 
-    public async Task<UserResponse> GetAllOrganizationsAsync()
+    public async Task<UserResponse<PaginatedResponse<Organization>>> GetAllOrganizationsAsync(SearchRequest? searchRequest)
     {
         try
         {
-            var organizations = await _organizationDal.GetAllOrganizationsAsync();
-            return new UserResponse { Message = "Organizations retrieved successfully", Status = StatusEnum.SUCCESS, Data = organizations };
+            PaginatedResponse<Organization> organizations = await _organizationDal.GetAllOrganizationsAsync(searchRequest);
+            if (organizations.Data == null || organizations.Data.Count == 0)
+            {
+                return new UserResponse<PaginatedResponse<Organization>> { Message = "No organizations found", Status = StatusEnum.INFO };
+            }
+
+            return new UserResponse<PaginatedResponse<Organization>> { Message = "Organizations retrieved successfully", Status = StatusEnum.SUCCESS, Data = organizations };
         }
         catch (Exception e)
         {
-            return new UserResponse { Message = e.Message, Status = StatusEnum.ERROR };
+            return new UserResponse<PaginatedResponse<Organization>> { Message = e.Message, Status = StatusEnum.ERROR };
         }
     }
 
-    public async Task<UserResponse> GetOrganizationByIdAsync(string id)
+    public async Task<UserResponse> GetOrganizationByIdAsync(int id)
     {
         try
         {
@@ -83,12 +86,10 @@ public class OrganizationHandler(OrganizationDAL organizationDal, DbConnectionMo
         }
     }
 
-    public async Task<UserResponse> UpdateOrganizationAsync(string id, OrganizationModel organization)
+    public async Task<UserResponse> UpdateOrganizationAsync(Organization organization)
     {
         try
         {
-            organization.Id = id;
-            _ = organization.ValidateExistingOrganizationModel();
             var result = await _organizationDal.UpdateOrganizationAsync(organization);
             if (!result)
             {
@@ -102,7 +103,7 @@ public class OrganizationHandler(OrganizationDAL organizationDal, DbConnectionMo
         }
     }
 
-    public async Task<UserResponse> DeleteOrganizationAsync(string id)
+    public async Task<UserResponse> DeleteOrganizationAsync(int id)
     {
         try
         {

@@ -11,5 +11,6 @@ namespace TransactEase.Models.Entities
         public DateTime CreatedAt { get; set; }
         public int? CashbackId { get; set; }
         public int OrganizationId { get; set; }
+        public decimal CashbackAmount { get; set; }
     }
 }

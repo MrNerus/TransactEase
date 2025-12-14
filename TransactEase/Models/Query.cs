@@ -23,12 +23,12 @@ namespace TransactEase.Models
         public static string UpdateBankTransaction = "UPDATE BANK_TRANSACTION SET BankAccountId = @BankAccountId, TransactionType = @TransactionType, Amount = @Amount, TransactionDate = @TransactionDate, Description = @Description WHERE Id = @Id;";
         public static string CheckBankHierarchy = "SELECT Type FROM BANK WHERE ParentCode = @ParentCode;";
         public static string SelectBank = "SELECT * FROM BANK WHERE Id = @Id;";
-        public static string CreateOrganization = "INSERT INTO ORGANIZATION (Name, Address, Code, SwiftCode, Country, Type, Contact, Email, ParentCode) VALUES (@Name, @Address, @Code, @SwiftCode, @Country, @Type, @Contact, @Email, @ParentCode);";
-        public static string GetAllOrganizations = "SELECT * FROM ORGANIZATION WHERE IsActive = true;";
-        public static string GetOrganization = "SELECT * FROM ORGANIZATION WHERE Id = @Id AND IsActive = true;";
-        public static string UpdateOrganization = "UPDATE ORGANIZATION SET Name = @Name, Address = @Address, SwiftCode = @SwiftCode, Country = @Country, Type = @Type, Contact = @Contact, Email = @Email WHERE Id = @Id;";
-        public static string DeleteOrganization = "UPDATE ORGANIZATION SET IsActive = false WHERE Id = @Id;";
-        public static string CheckOrganizationHierarchy = "SELECT Type FROM ORGANIZATION WHERE ParentCode = @ParentCode;";
+        public static string CreateOrganization = "INSERT INTO organizations (name, parent_id) VALUES (@Name, @ParentId);";
+        public static string GetAllOrganizations = "SELECT id, name, parent_id parentId, created_at createdAt FROM organizations WHERE 1=1";
+        public static string GetOrganization = "SELECT id, name, parent_id parentId, created_at createdAt FROM organizations WHERE id = @id;";
+        public static string UpdateOrganization = "UPDATE organizations SET name = @name, parent_id = @parentId WHERE id = @id;";
+        public static string DeleteOrganization = "UPDATE organizations SET is_active = false WHERE id = @Id;";
+        public static string CheckOrganizationHierarchy = "SELECT id FROM organizations WHERE id = @parentId;";
 
         public static string CreateOrganizationTable = @"
             CREATE TABLE IF NOT EXISTS ORGANIZATION (
@@ -77,6 +77,33 @@ namespace TransactEase.Models
                 PRIMARY KEY (UserId, RoleId),
                 FOREIGN KEY (UserId) REFERENCES USERS(Id),
                 FOREIGN KEY (RoleId) REFERENCES ROLES(Id)
+            );
+        ";
+
+
+        public static string CreateTransactionsTable = @"
+            CREATE TABLE IF NOT EXISTS TRANSACTIONS (
+                Id SERIAL PRIMARY KEY,
+                UserId INT NOT NULL,
+                ReceiverId INT NOT NULL,
+                Amount DECIMAL(18, 2) NOT NULL,
+                CashbackId INT,
+                OrganizationId INT NOT NULL,
+                CashbackAmount DECIMAL(18, 2) DEFAULT 0,
+                CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                FOREIGN KEY (UserId) REFERENCES USERS(Id),
+                FOREIGN KEY (ReceiverId) REFERENCES USERS(Id),
+                FOREIGN KEY (OrganizationId) REFERENCES ORGANIZATION(Id)
+            );
+        ";
+
+        public static string CreateCashbackSchemesTable = @"
+            CREATE TABLE IF NOT EXISTS CASHBACK_SCHEMES (
+                Id SERIAL PRIMARY KEY,
+                Name VARCHAR(255) NOT NULL,
+                Description TEXT,
+                Rate DECIMAL(5, 4) DEFAULT 0,
+                IsActive BOOLEAN NOT NULL DEFAULT true
             );
         ";
 

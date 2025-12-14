@@ -41,8 +41,8 @@ namespace TransactEase.Controllers
         {
             using var connection = _dbService.CreateConnection();
             var sql = @"
-                INSERT INTO cashback_schemes (name, description, is_active)
-                VALUES (@Name, @Description, @IsActive)
+                INSERT INTO cashback_schemes (name, description, rate, is_active)
+                VALUES (@Name, @Description, @Rate, @IsActive)
                 RETURNING id;";
             var id = await connection.ExecuteScalarAsync<int>(sql, scheme);
             scheme.Id = id;
@@ -60,6 +60,7 @@ namespace TransactEase.Controllers
                 UPDATE cashback_schemes 
                 SET name = @Name, 
                     description = @Description, 
+                    rate = @Rate, 
                     is_active = @IsActive 
                 WHERE id = @Id";
             var result = await connection.ExecuteAsync(sql, scheme);

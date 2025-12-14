@@ -54,6 +54,7 @@ namespace TransactEase.BusinessLayer
                 [
                     new TableColumnModel{ Key = "name", Label = "Name" },
                     new TableColumnModel{ Key = "description", Label = "Description" },
+                    new TableColumnModel{ Key = "rate", Label = "Rate" },
                     new TableColumnModel{ Key = "isActive", Label = "Active", IsBoolean = true },
                 ],
                 SearchableFields = ["name", "description"]
@@ -149,6 +150,7 @@ namespace TransactEase.BusinessLayer
                 Fields = [
                     new FormFieldModel { Key = "name", Label = "Name", Type = "text", Required = true },
                     new FormFieldModel { Key = "description", Label = "Description", Type = "textarea", Required = true },
+                    new FormFieldModel { Key = "rate", Label = "Rate (0.0 - 1.0)", Type = "number", Required = true },
                     new FormFieldModel { Key = "isActive", Label = "Active", Type = "boolean" },
                 ]
             },

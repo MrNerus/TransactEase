@@ -28,6 +28,8 @@ public class DatabaseDAL
             await connection.ExecuteAsync(Query.CreateUsersTable, transaction: transaction);
             await connection.ExecuteAsync(Query.CreateRolesTable, transaction: transaction);
             await connection.ExecuteAsync(Query.CreateUserRolesTable, transaction: transaction);
+            await connection.ExecuteAsync(Query.CreateTransactionsTable, transaction: transaction);
+            await connection.ExecuteAsync(Query.CreateCashbackSchemesTable, transaction: transaction);
             await connection.ExecuteAsync(Query.CreateDbVersionTable, transaction: transaction);
             await connection.ExecuteAsync("INSERT INTO DB_VERSION (Version) VALUES (1)", transaction: transaction);
             await transaction.CommitAsync();

@@ -1,0 +1,2 @@
+09:41:25 ~~ SUCCESS ~~ {"message":"Organization created successfully","invoker":"CreateOrganization","data":{"Id":0,"Name":"Lagankhel Branch","ParentId":1,"CreatedAt":"0001-01-01T00:00:00"}}
+09:49:33 ~~ SUCCESS ~~ {"message":"Organization created successfully","invoker":"CreateOrganization","data":{"Id":0,"Name":"Godawari Terminal A","ParentId":2,"CreatedAt":"0001-01-01T00:00:00"}}

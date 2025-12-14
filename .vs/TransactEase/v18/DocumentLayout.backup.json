@@ -1,0 +1,257 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\AspNetCore\\TransactEase\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D38FFA0C-0537-43C5-B7EA-F3A84389B52B}|TransactEase\\TransactEase.csproj|d:\\aspnetcore\\transactease\\transactease\\models\\query.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D38FFA0C-0537-43C5-B7EA-F3A84389B52B}|TransactEase\\TransactEase.csproj|solutionrelative:transactease\\models\\query.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D38FFA0C-0537-43C5-B7EA-F3A84389B52B}|TransactEase\\TransactEase.csproj|d:\\aspnetcore\\transactease\\transactease\\controllers\\organizationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D38FFA0C-0537-43C5-B7EA-F3A84389B52B}|TransactEase\\TransactEase.csproj|solutionrelative:transactease\\controllers\\organizationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D38FFA0C-0537-43C5-B7EA-F3A84389B52B}|TransactEase\\TransactEase.csproj|d:\\aspnetcore\\transactease\\transactease\\businesslayer\\organizationhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D38FFA0C-0537-43C5-B7EA-F3A84389B52B}|TransactEase\\TransactEase.csproj|solutionrelative:transactease\\businesslayer\\organizationhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D38FFA0C-0537-43C5-B7EA-F3A84389B52B}|TransactEase\\TransactEase.csproj|d:\\aspnetcore\\transactease\\transactease\\datalayer\\organizationdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D38FFA0C-0537-43C5-B7EA-F3A84389B52B}|TransactEase\\TransactEase.csproj|solutionrelative:transactease\\datalayer\\organizationdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D38FFA0C-0537-43C5-B7EA-F3A84389B52B}|TransactEase\\TransactEase.csproj|d:\\aspnetcore\\transactease\\transactease\\helper\\listinghelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D38FFA0C-0537-43C5-B7EA-F3A84389B52B}|TransactEase\\TransactEase.csproj|solutionrelative:transactease\\helper\\listinghelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D38FFA0C-0537-43C5-B7EA-F3A84389B52B}|TransactEase\\TransactEase.csproj|d:\\aspnetcore\\transactease\\transactease\\helper\\dynamicquerybuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D38FFA0C-0537-43C5-B7EA-F3A84389B52B}|TransactEase\\TransactEase.csproj|solutionrelative:transactease\\helper\\dynamicquerybuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D38FFA0C-0537-43C5-B7EA-F3A84389B52B}|TransactEase\\TransactEase.csproj|d:\\aspnetcore\\transactease\\transactease\\enums\\fieldtypeenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D38FFA0C-0537-43C5-B7EA-F3A84389B52B}|TransactEase\\TransactEase.csproj|solutionrelative:transactease\\enums\\fieldtypeenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D38FFA0C-0537-43C5-B7EA-F3A84389B52B}|TransactEase\\TransactEase.csproj|d:\\aspnetcore\\transactease\\transactease\\models\\paging.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D38FFA0C-0537-43C5-B7EA-F3A84389B52B}|TransactEase\\TransactEase.csproj|solutionrelative:transactease\\models\\paging.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D38FFA0C-0537-43C5-B7EA-F3A84389B52B}|TransactEase\\TransactEase.csproj|d:\\aspnetcore\\transactease\\transactease\\models\\fieldcolumnmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D38FFA0C-0537-43C5-B7EA-F3A84389B52B}|TransactEase\\TransactEase.csproj|solutionrelative:transactease\\models\\fieldcolumnmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D38FFA0C-0537-43C5-B7EA-F3A84389B52B}|TransactEase\\TransactEase.csproj|d:\\aspnetcore\\transactease\\transactease\\models\\fieldmapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D38FFA0C-0537-43C5-B7EA-F3A84389B52B}|TransactEase\\TransactEase.csproj|solutionrelative:transactease\\models\\fieldmapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D38FFA0C-0537-43C5-B7EA-F3A84389B52B}|TransactEase\\TransactEase.csproj|d:\\aspnetcore\\transactease\\transactease\\dto\\userresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D38FFA0C-0537-43C5-B7EA-F3A84389B52B}|TransactEase\\TransactEase.csproj|solutionrelative:transactease\\dto\\userresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D38FFA0C-0537-43C5-B7EA-F3A84389B52B}|TransactEase\\TransactEase.csproj|d:\\aspnetcore\\transactease\\transactease\\businesslayer\\cashbackservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D38FFA0C-0537-43C5-B7EA-F3A84389B52B}|TransactEase\\TransactEase.csproj|solutionrelative:transactease\\businesslayer\\cashbackservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D38FFA0C-0537-43C5-B7EA-F3A84389B52B}|TransactEase\\TransactEase.csproj|d:\\aspnetcore\\transactease\\transactease\\businesslayer\\trustservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D38FFA0C-0537-43C5-B7EA-F3A84389B52B}|TransactEase\\TransactEase.csproj|solutionrelative:transactease\\businesslayer\\trustservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D38FFA0C-0537-43C5-B7EA-F3A84389B52B}|TransactEase\\TransactEase.csproj|d:\\aspnetcore\\transactease\\transactease\\businesslayer\\schemaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D38FFA0C-0537-43C5-B7EA-F3A84389B52B}|TransactEase\\TransactEase.csproj|solutionrelative:transactease\\businesslayer\\schemaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ListingHelper.cs",
+              "DocumentMoniker": "D:\\AspNetCore\\TransactEase\\TransactEase\\Helper\\ListingHelper.cs",
+              "RelativeDocumentMoniker": "TransactEase\\Helper\\ListingHelper.cs",
+              "ToolTip": "D:\\AspNetCore\\TransactEase\\TransactEase\\Helper\\ListingHelper.cs",
+              "RelativeToolTip": "TransactEase\\Helper\\ListingHelper.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAIA9wCEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T16:43:43.487Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Paging.cs",
+              "DocumentMoniker": "D:\\AspNetCore\\TransactEase\\TransactEase\\Models\\Paging.cs",
+              "RelativeDocumentMoniker": "TransactEase\\Models\\Paging.cs",
+              "ToolTip": "D:\\AspNetCore\\TransactEase\\TransactEase\\Models\\Paging.cs",
+              "RelativeToolTip": "TransactEase\\Models\\Paging.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAA7wBsAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T16:01:57.628Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DynamicQueryBuilder.cs",
+              "DocumentMoniker": "D:\\AspNetCore\\TransactEase\\TransactEase\\Helper\\DynamicQueryBuilder.cs",
+              "RelativeDocumentMoniker": "TransactEase\\Helper\\DynamicQueryBuilder.cs",
+              "ToolTip": "D:\\AspNetCore\\TransactEase\\TransactEase\\Helper\\DynamicQueryBuilder.cs",
+              "RelativeToolTip": "TransactEase\\Helper\\DynamicQueryBuilder.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAQwFMAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T15:58:47.464Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FieldColumnMap.cs",
+              "DocumentMoniker": "D:\\AspNetCore\\TransactEase\\TransactEase\\Models\\FieldColumnMap.cs",
+              "RelativeDocumentMoniker": "TransactEase\\Models\\FieldColumnMap.cs",
+              "ToolTip": "D:\\AspNetCore\\TransactEase\\TransactEase\\Models\\FieldColumnMap.cs",
+              "RelativeToolTip": "TransactEase\\Models\\FieldColumnMap.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T15:49:39.479Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FieldTypeEnum.cs",
+              "DocumentMoniker": "D:\\AspNetCore\\TransactEase\\TransactEase\\Enums\\FieldTypeEnum.cs",
+              "RelativeDocumentMoniker": "TransactEase\\Enums\\FieldTypeEnum.cs",
+              "ToolTip": "D:\\AspNetCore\\TransactEase\\TransactEase\\Enums\\FieldTypeEnum.cs",
+              "RelativeToolTip": "TransactEase\\Enums\\FieldTypeEnum.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T15:45:53.333Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OrganizationController.cs",
+              "DocumentMoniker": "D:\\AspNetCore\\TransactEase\\TransactEase\\Controllers\\OrganizationController.cs",
+              "RelativeDocumentMoniker": "TransactEase\\Controllers\\OrganizationController.cs",
+              "ToolTip": "D:\\AspNetCore\\TransactEase\\TransactEase\\Controllers\\OrganizationController.cs",
+              "RelativeToolTip": "TransactEase\\Controllers\\OrganizationController.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAApwCQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-13T03:35:36.953Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OrganizationHandler.cs",
+              "DocumentMoniker": "D:\\AspNetCore\\TransactEase\\TransactEase\\BusinessLayer\\OrganizationHandler.cs",
+              "RelativeDocumentMoniker": "TransactEase\\BusinessLayer\\OrganizationHandler.cs",
+              "ToolTip": "D:\\AspNetCore\\TransactEase\\TransactEase\\BusinessLayer\\OrganizationHandler.cs",
+              "RelativeToolTip": "TransactEase\\BusinessLayer\\OrganizationHandler.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAApwDYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-13T03:47:27.986Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "OrganizationDAL.cs",
+              "DocumentMoniker": "D:\\AspNetCore\\TransactEase\\TransactEase\\DataLayer\\OrganizationDAL.cs",
+              "RelativeDocumentMoniker": "TransactEase\\DataLayer\\OrganizationDAL.cs",
+              "ToolTip": "D:\\AspNetCore\\TransactEase\\TransactEase\\DataLayer\\OrganizationDAL.cs",
+              "RelativeToolTip": "TransactEase\\DataLayer\\OrganizationDAL.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAQwDIAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-13T03:45:37.882Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Query.cs",
+              "DocumentMoniker": "D:\\AspNetCore\\TransactEase\\TransactEase\\Models\\Query.cs",
+              "RelativeDocumentMoniker": "TransactEase\\Models\\Query.cs",
+              "ToolTip": "D:\\AspNetCore\\TransactEase\\TransactEase\\Models\\Query.cs",
+              "RelativeToolTip": "TransactEase\\Models\\Query.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAACKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-13T03:41:04.832Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FieldMapping.cs",
+              "DocumentMoniker": "D:\\AspNetCore\\TransactEase\\TransactEase\\Models\\FieldMapping.cs",
+              "RelativeDocumentMoniker": "TransactEase\\Models\\FieldMapping.cs",
+              "ToolTip": "D:\\AspNetCore\\TransactEase\\TransactEase\\Models\\FieldMapping.cs",
+              "RelativeToolTip": "TransactEase\\Models\\FieldMapping.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAQAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T15:44:52.038Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UserResponse.cs",
+              "DocumentMoniker": "D:\\AspNetCore\\TransactEase\\TransactEase\\DTO\\UserResponse.cs",
+              "RelativeDocumentMoniker": "TransactEase\\DTO\\UserResponse.cs",
+              "ToolTip": "D:\\AspNetCore\\TransactEase\\TransactEase\\DTO\\UserResponse.cs",
+              "RelativeToolTip": "TransactEase\\DTO\\UserResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T08:11:09.496Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "TrustService.cs",
+              "DocumentMoniker": "D:\\AspNetCore\\TransactEase\\TransactEase\\BusinessLayer\\TrustService.cs",
+              "RelativeDocumentMoniker": "TransactEase\\BusinessLayer\\TrustService.cs",
+              "ToolTip": "D:\\AspNetCore\\TransactEase\\TransactEase\\BusinessLayer\\TrustService.cs",
+              "RelativeToolTip": "TransactEase\\BusinessLayer\\TrustService.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwBAAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-13T06:43:46.974Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CashbackService.cs",
+              "DocumentMoniker": "D:\\AspNetCore\\TransactEase\\TransactEase\\BusinessLayer\\CashbackService.cs",
+              "RelativeDocumentMoniker": "TransactEase\\BusinessLayer\\CashbackService.cs",
+              "ToolTip": "D:\\AspNetCore\\TransactEase\\TransactEase\\BusinessLayer\\CashbackService.cs",
+              "RelativeToolTip": "TransactEase\\BusinessLayer\\CashbackService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-13T06:45:54.156Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "SchemaService.cs",
+              "DocumentMoniker": "D:\\AspNetCore\\TransactEase\\TransactEase\\BusinessLayer\\SchemaService.cs",
+              "RelativeDocumentMoniker": "TransactEase\\BusinessLayer\\SchemaService.cs",
+              "ToolTip": "D:\\AspNetCore\\TransactEase\\TransactEase\\BusinessLayer\\SchemaService.cs",
+              "RelativeToolTip": "TransactEase\\BusinessLayer\\SchemaService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-13T06:40:52.119Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

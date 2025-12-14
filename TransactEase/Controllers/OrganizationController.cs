@@ -3,6 +3,7 @@ using TransactEase.BusinessLayer;
 using TransactEase.DTO;
 using TransactEase.Enums;
 using TransactEase.Models;
+using TransactEase.Models.Entities;
 
 namespace TransactEase.Controllers;
 
@@ -14,7 +15,7 @@ public class OrganizationController(OrganizationHandler organizationHandler) : C
 
     [HttpPost]
     [Route("create")]
-    public async Task<IActionResult> CreateOrganization([FromBody] OrganizationModel organization)
+    public async Task<IActionResult> CreateOrganization([FromBody] Organization organization)
     {
         try
         {
@@ -23,18 +24,18 @@ public class OrganizationController(OrganizationHandler organizationHandler) : C
             return BadRequest(res);
         }
         catch (Exception e)
-        { 
+        {
             return BadRequest(new UserResponse { Message = e.Message, Status = StatusEnum.ERROR });
         }
     }
 
     [HttpGet]
     [Route("get-all")]
-    public async Task<IActionResult> GetAllOrganizations()
+    public async Task<IActionResult> GetAllOrganizations([FromQuery] SearchRequest? searchRequest = null)
     {
         try
         {
-            UserResponse res = await _organizationHandler.GetAllOrganizationsAsync();
+            UserResponse<PaginatedResponse<Organization>> res = await _organizationHandler.GetAllOrganizationsAsync(searchRequest);
             if (res.Status != StatusEnum.ERROR) return Ok(res);
             return BadRequest(res);
         }
@@ -46,7 +47,7 @@ public class OrganizationController(OrganizationHandler organizationHandler) : C
 
     [HttpGet]
     [Route("get/{id}")]
-    public async Task<IActionResult> GetOrganizationById(string id)
+    public async Task<IActionResult> GetOrganizationById(int id)
     {
         try
         {
@@ -61,12 +62,12 @@ public class OrganizationController(OrganizationHandler organizationHandler) : C
     }
 
     [HttpPut]
-    [Route("update/{id}")]
-    public async Task<IActionResult> UpdateOrganization(string id, [FromBody] OrganizationModel organization)
+    [Route("update")]
+    public async Task<IActionResult> UpdateOrganization([FromBody] Organization organization)
     {
         try
         {
-            UserResponse res = await _organizationHandler.UpdateOrganizationAsync(id, organization);
+            UserResponse res = await _organizationHandler.UpdateOrganizationAsync(organization);
             if (res.Status != StatusEnum.ERROR) return Ok(res);
             return BadRequest(res);
         }
@@ -78,7 +79,7 @@ public class OrganizationController(OrganizationHandler organizationHandler) : C
 
     [HttpDelete]
     [Route("delete/{id}")]
-    public async Task<IActionResult> DeleteOrganization(string id)
+    public async Task<IActionResult> DeleteOrganization(int id)
     {
         try
         {
